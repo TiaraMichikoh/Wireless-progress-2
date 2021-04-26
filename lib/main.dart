@@ -177,49 +177,6 @@ class SettingPage extends StatelessWidget {
     );
   }
 }
-// ignore: camel_case_types
-class infoPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('User Information'),
-      ),
-      body: Column(
-          children: [
-            TextFormField(
-              decoration: const InputDecoration(
-                icon: Icon(Icons.person),
-                hintText: 'Firstname - Lastname',
-                labelText: 'Name',
-              ),
-            ),
-            TextFormField(
-              decoration: const InputDecoration(
-                icon: Icon(Icons.call),
-                hintText: 'xxx-xxx-xxxx',
-                labelText: 'Phone Number',
-              ),
-            ),
-            TextFormField(
-              decoration: const InputDecoration(
-                icon: Icon(Icons.calendar_today),
-                hintText: 'xx-xx-xxxx',
-                labelText: 'Date of Birth',
-              ),
-            ),
-            TextFormField(
-              decoration: const InputDecoration(
-                icon: Icon(Icons.home_rounded),
-                hintText: 'Current Address',
-                labelText: 'Address',
-              ),
-            ),
-          ]
-      ),
-    );
-  }
-}
 
 // ignore: camel_case_types
 class add3Emergen extends StatelessWidget {
@@ -250,6 +207,50 @@ class add3Emergen extends StatelessWidget {
                 icon: Icon(Icons.call),
                 hintText: 'xxx-xxx-xxxx',
                 labelText: 'Phone Number #3',
+              ),
+            ),
+          ]
+      ),
+    );
+  }
+}
+
+// ignore: camel_case_types
+class infoPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('User Information'),
+      ),
+      body: Column(
+          children: [
+            TextFormField(
+              decoration: const InputDecoration(
+                icon: Icon(Icons.person),
+                hintText: 'Firstname - Lastname',
+                labelText: 'Name',
+              ),
+            ),
+            TextFormField(
+              decoration: const InputDecoration(
+                icon: Icon(Icons.call),
+                hintText: 'xxx-xxx-xxxx',
+                labelText: 'Phone Number',
+              ),
+            ),
+            TextFormField(
+              decoration: const InputDecoration(
+                icon: Icon(Icons.calendar_today),
+                hintText: 'DD-MM-YYYY',
+                labelText: 'Date of Birth',
+              ),
+            ),
+            TextFormField(
+              decoration: const InputDecoration(
+                icon: Icon(Icons.home_rounded),
+                hintText: 'Current Address',
+                labelText: 'Address',
               ),
             ),
           ]
