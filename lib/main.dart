@@ -152,15 +152,107 @@ class SettingPage extends StatelessWidget {
             title: Text('Add Emergency Numbers'),
             trailing: Icon(Icons.arrow_forward_ios),
             onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context)=>add3Emergen()
+                ),
+              );
             },
           ),
           ListTile(
             title: Text('User Information'),
             trailing: Icon(Icons.arrow_forward_ios),
             onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context)=>infoPage()
+                ),
+              );
             },
           ),
         ],
+      ),
+    );
+  }
+}
+// ignore: camel_case_types
+class infoPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('User Information'),
+      ),
+      body: Column(
+          children: [
+            TextFormField(
+              decoration: const InputDecoration(
+                icon: Icon(Icons.person),
+                hintText: 'Firstname - Lastname',
+                labelText: 'Name',
+              ),
+            ),
+            TextFormField(
+              decoration: const InputDecoration(
+                icon: Icon(Icons.call),
+                hintText: 'xxx-xxx-xxxx',
+                labelText: 'Phone Number',
+              ),
+            ),
+            TextFormField(
+              decoration: const InputDecoration(
+                icon: Icon(Icons.calendar_today),
+                hintText: 'xx-xx-xxxx',
+                labelText: 'Date of Birth',
+              ),
+            ),
+            TextFormField(
+              decoration: const InputDecoration(
+                icon: Icon(Icons.home_rounded),
+                hintText: 'Current Address',
+                labelText: 'Address',
+              ),
+            ),
+          ]
+      ),
+    );
+  }
+}
+
+// ignore: camel_case_types
+class add3Emergen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Emergency Numbers'),
+      ),
+      body: Column(
+          children: [
+            TextFormField(
+              decoration: const InputDecoration(
+                icon: Icon(Icons.call),
+                hintText: 'xxx-xxx-xxxx',
+                labelText: 'Phone Number #1',
+              ),
+            ),
+            TextFormField(
+              decoration: const InputDecoration(
+                icon: Icon(Icons.call),
+                hintText: 'xxx-xxx-xxxx',
+                labelText: 'Phone Number #2',
+              ),
+            ),
+            TextFormField(
+              decoration: const InputDecoration(
+                icon: Icon(Icons.call),
+                hintText: 'xxx-xxx-xxxx',
+                labelText: 'Phone Number #3',
+              ),
+            ),
+          ]
       ),
     );
   }
